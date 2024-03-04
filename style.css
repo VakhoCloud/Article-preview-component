@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+    --color-grayish-blue: hsl(212, 23%, 69%);
+    --color-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    font-size: 13px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--color-light-grayish-blue);
+}
+
+
+.card  {
+    background-color: #fff;
+    width: 320px;
+    border-radius: 12px;
+}
+
+.card .display-image { 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    width: 100%;
+}
+
+.profile .avatar { 
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.main-content {
+    margin: 32px;
+}
+
+h1  {
+    font-size: 1rem;
+    color: var(--color-very-dark-grayish-blue);
+}
+
+p  {
+    color: var(--color-desaturated-dark-blue);
+}
+
+
+.profile {
+    position: relative;
+    height: 56px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile p {
+    margin: 0;
+}
+
+
+
+
+h2 { 
+    font-size: 13px;
+    margin: 0;
+}
+
+
+.share {
+    background-color: transparent;
+    max-width: 13px;
+    max-height: 13px;
+}
+
+.hidden { 
+    position: absolute;
+    width: 320px;
+    z-index: 1;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color:var(--color-very-dark-grayish-blue);
+    transform: translate(0, -6vh);
+}
+
+
+.share-icon { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+
+.hidden div { 
+    /* position: absolute; */
+    display: flex;
+    gap: 15px;
+}
+
+.icons { 
+    max-width: 1rem;
+}
+
+.hidden h1 { 
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--color-grayish-blue);
+}
+
+
+button { 
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.angle {
+    display: none;
+}
+
+.active { 
+    display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 860px;
+        height: 256px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .card .display-image { 
+        margin: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        max-height: 100%;
+
+    }
+
+    /* .main-content { 
+    
+    } */
+
+    .profile { 
+        align-self: flex-end;
+    }
+
+    .hidden {
+        width: auto;
+        border-radius: 12px;
+        position: absolute;
+        gap: 15px;
+        transform: translate(35vh,-12vh);
+    }
+
+    .hidden .share-icon {
+        display: none;
+    }
+
+    .angle { 
+        display: block;
+        position: absolute;
+        background-color: var(--color-very-dark-grayish-blue);
+        width: 20px;
+        height: 20px;
+        transform: translate(7.5vh,3vh) rotate(45deg) ;
+    }
+  
+}
+
